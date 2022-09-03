@@ -2,11 +2,14 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        Contact contact1 = new Contact("123", "sasha");
+        Phonebook ph1 = new Phonebook();
+        ph1.createGroup("friends");
+        ph1.createGroup("friends");
 
-        Group group1 = new Group("friends");
-        group1.addContact(contact1);
-        group1.showContacts();
-        group1.findContact("123");
+        System.out.println(ph1);
+
+//        ph1
+//                .getGroupByName("friends")
+//                .addContact(new Contact("123", "sasha"));
     }
 }

@@ -7,6 +7,7 @@ public class Group {
 
     private ArrayList<Contact> contactsList;
 
+
     public Group(String title) {
         this.title = title;
         this.contactsList = new ArrayList<>();
@@ -27,5 +28,14 @@ public class Group {
                 System.out.println("found contact : " + contact);
             }
         });
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    @Override
+    public String toString() {
+        return title + ": " + contactsList;
     }
 }
