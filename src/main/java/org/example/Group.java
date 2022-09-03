@@ -1,33 +1,29 @@
 package org.example;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Group {
     private String title;
 
-    private ArrayList<Contact> contactsList;
+    private HashMap<String, Contact> contacts;
 
 
     public Group(String title) {
         this.title = title;
-        this.contactsList = new ArrayList<>();
+        this.contacts = new HashMap<>();
     }
 
     public void addContact(Contact contact) {
-        this.contactsList.add(contact);
+        this.contacts.put(contact.getPhoneNumber(), contact);
     }
 
     public void showContacts() {
         System.out.println("Group: " + title);
-        contactsList.forEach(i-> System.out.println(i));
+        System.out.println(contacts.values().toString());
     }
 
-    public void findContact(String value) {
-        contactsList.forEach(contact -> {
-            if (contact.getName().equals(value) || contact.getPhoneNumber().equals(value)) {
-                System.out.println("found contact : " + contact);
-            }
-        });
+    public Contact findContact(String value) {
+        return contacts.get(value);
     }
 
     public String getTitle() {
@@ -36,6 +32,6 @@ public class Group {
 
     @Override
     public String toString() {
-        return title + ": " + contactsList;
+        return title + ": " + contacts;
     }
 }
