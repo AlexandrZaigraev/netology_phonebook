@@ -9,8 +9,17 @@ public class Contact {
         this.name = name;
     }
 
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return phoneNumber + ": " + name;
     }
+
 }

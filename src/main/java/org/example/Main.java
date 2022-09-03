@@ -7,5 +7,6 @@ public class Main {
         Group group1 = new Group("friends");
         group1.addContact(contact1);
         group1.showContacts();
+        group1.findContact("123");
     }
 }

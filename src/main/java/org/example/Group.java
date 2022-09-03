@@ -20,4 +20,12 @@ public class Group {
         System.out.println("Group: " + title);
         contactsList.forEach(i-> System.out.println(i));
     }
+
+    public void findContact(String value) {
+        contactsList.forEach(contact -> {
+            if (contact.getName().equals(value) || contact.getPhoneNumber().equals(value)) {
+                System.out.println("found contact : " + contact);
+            }
+        });
+    }
 }
