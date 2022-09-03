@@ -13,6 +13,9 @@ public class Main {
         group2.addContact(new Contact("999", "wqef"));
         group2.addContact(new Contact("35741", "fdg"));
 
+        Contact contact1 = group1.findContact("254");
+        System.out.println(contact1);
+
         System.out.println(ph1);
 
 //        ph1

@@ -5,6 +5,9 @@ import java.util.HashMap;
 public class Group {
     private String title;
 
+    /**
+     * k: phone number, value: contact
+     */
     private HashMap<String, Contact> contacts;
 
 
@@ -22,8 +25,11 @@ public class Group {
         System.out.println(contacts.values().toString());
     }
 
-    public Contact findContact(String value) {
-        return contacts.get(value);
+    /**
+     * find contact by phone
+     */
+    public Contact findContact(String phone) {
+        return contacts.get(phone);
     }
 
     public String getTitle() {
