@@ -18,6 +18,15 @@ public class Phonebook {
         return this.groups.get(groupName);
     }
 
+    public String getContactByPhone(String phoneNumber) {
+        for (Group value : groups.values()) {
+            if (phoneNumber.equals(phoneNumber)) {
+                return groups.toString();
+            }
+        }
+        return null;
+    }
+
     @Override
     public String toString() {
         return groups.values().toString();

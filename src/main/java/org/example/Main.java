@@ -10,11 +10,13 @@ public class Main {
 
         ph1.createGroup("neighbours");
         Group group2 = ph1.getGroupByName("neighbours");
-        group2.addContact(new Contact("999", "wqef"));
-        group2.addContact(new Contact("35741", "fdg"));
+        group2.addContact(new Contact("999", "Klivlend"));
+        group2.addContact(new Contact("35741", "Kuagmaer"));
 
         Contact contact1 = group1.findContact("254");
         System.out.println(contact1);
+        ph1.getContactByPhone("999");
+
 
         System.out.println(ph1);
 
